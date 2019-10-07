@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  macos-window-manager
-//
-//  Created by Tamas Sule on 2019. 10. 07..
-//  Copyright © 2019. Tamas Sule. All rights reserved.
-//
-
 import Cocoa
 
 class ViewController: NSViewController {
