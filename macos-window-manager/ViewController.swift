@@ -62,7 +62,6 @@ class ViewController: NSViewController {
     
     func handeKeyPress(event: NSEvent) -> Void {
         // right arrow && command and shift
-        NSLog("Key pressed\n");
         if event.keyCode == 0x7C && event.modifierFlags.contains(.command) && event.modifierFlags.contains(.shift) {
             NSLog("Shortcut found\n");
             moveFrontWindow();
