@@ -19,34 +19,22 @@ class ViewController: NSViewController {
                 let appRef = AXUIElementCreateApplication(frontApp.processIdentifier)
                 var value: AnyObject?
                 AXUIElementCopyAttributeValue(appRef, kAXWindowsAttribute as CFString, &value)
+                AXUIElementCopyAttributeValue(appRef, kAXFocusedWindowAttribute as CFString, &value);
                 
-                if let wList = value as? [AXUIElement] {
+                if let window = value as! AXUIElement? {
+                    var position : CFTypeRef
+                    var size : CFTypeRef
+                    var newPoint = CGPoint(x: 0, y: 0)
+                    let screenFrame = NSScreen.main!.frame;
+                    var newSize = CGSize(width: screenFrame.width / 2, height: screenFrame.height)
                     
-                    for w in wList {
-                        var isMainWindow: AnyObject?
-                        AXUIElementCopyAttributeValue(w, kAXMainAttribute as CFString, &isMainWindow)
-                        
-                        var windowTitle: AnyObject?
-                        AXUIElementCopyAttributeValue(w, kAXTitleAttribute as CFString, &windowTitle)
-                        
-                        NSLog("Window title: %@, Is focused %@\n", windowTitle as! NSString, isMainWindow as! Bool ? "yes" : "no")
-                        
-                        if isMainWindow as! Bool == true  {
-                            var position : CFTypeRef
-                            var size : CFTypeRef
-                            var newPoint = CGPoint(x: 0, y: 0)
-                            let screenFrame = NSScreen.main!.frame;
-                            var newSize = CGSize(width: screenFrame.width / 2, height: screenFrame.height)
-                            
-                            NSLog("Window title: %@\n", windowTitle as! NSString)
-                            
-                            position = AXValueCreate(AXValueType(rawValue: kAXValueCGPointType)!,&newPoint)!;
-                            AXUIElementSetAttributeValue(w, kAXPositionAttribute as CFString, position);
-                            
-                            size = AXValueCreate(AXValueType(rawValue: kAXValueCGSizeType)!,&newSize)!;
-                            AXUIElementSetAttributeValue(w, kAXSizeAttribute as CFString, size);
-                        }
-                    }
+                    //NSLog("Window title: %@\n", windowTitle as! NSString)
+                    
+                    position = AXValueCreate(AXValueType(rawValue: kAXValueCGPointType)!,&newPoint)!;
+                    AXUIElementSetAttributeValue(window, kAXPositionAttribute as CFString, position);
+                    
+                    size = AXValueCreate(AXValueType(rawValue: kAXValueCGSizeType)!,&newSize)!;
+                    AXUIElementSetAttributeValue(window, kAXSizeAttribute as CFString, size);
                 }
             }
         }
