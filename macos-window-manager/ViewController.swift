@@ -45,6 +45,10 @@ class ViewController: NSViewController {
         if event.keyCode == 0x7C && event.modifierFlags.contains(.command) && event.modifierFlags.contains(.shift) {
             NSLog("Shortcut found\n");
             moveFrontWindow();
+            self.view.window!.ignoresMouseEvents = true
+            self.view.window!.level = .popUpMenu
+            self.view.window!.isOpaque = false
+            self.view.window!.orderFront(nil)
         }
         
     }
