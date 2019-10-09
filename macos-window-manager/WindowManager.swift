@@ -11,7 +11,7 @@ struct ArrowKeys {
 }
 
 class WindowManager {
-    private var windowMover = WindowMover()
+    private var windowMover = StandardWindowMover()
     
     private static var didRegisterKeyMonitoring = false;
     
