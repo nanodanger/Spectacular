@@ -1,11 +1,3 @@
-//
-//  macos_window_managerTests.swift
-//  macos-window-managerTests
-//
-//  Created by Tamas Sule on 2019. 10. 07..
-//  Copyright © 2019. Tamas Sule. All rights reserved.
-//
-
 import XCTest
 @testable import macos_window_manager
 
