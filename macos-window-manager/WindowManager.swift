@@ -1,5 +1,4 @@
 import Cocoa
-import Carbon
 
 enum MoveTypes {
     case leftHalf
