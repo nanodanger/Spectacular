@@ -31,4 +31,19 @@ class StandardWindowMover: WindowMover {
         size = AXValueCreate(AXValueType(rawValue: kAXValueCGSizeType)!,&newSize)!;
         AXUIElementSetAttributeValue(window, kAXSizeAttribute as CFString, size);
     }
+    
+    func fullSize(window: AXUIElement) {
+        let screenFrame = NSScreen.main!.frame;
+        var newSize = CGSize(width: screenFrame.width, height: screenFrame.height)
+        
+        var position : CFTypeRef
+        var size : CFTypeRef
+        var newPoint = CGPoint(x: 0, y: 0)
+        
+        position = AXValueCreate(AXValueType(rawValue: kAXValueCGPointType)!,&newPoint)!;
+        AXUIElementSetAttributeValue(window, kAXPositionAttribute as CFString, position);
+        
+        size = AXValueCreate(AXValueType(rawValue: kAXValueCGSizeType)!,&newSize)!;
+        AXUIElementSetAttributeValue(window, kAXSizeAttribute as CFString, size);
+    }
 }

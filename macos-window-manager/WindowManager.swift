@@ -1,17 +1,52 @@
 import Cocoa
+import Carbon
 
 enum MoveTypes {
     case leftHalf
     case rightHalf
+    case fullSize
 }
 
-struct ArrowKeys {
-    static let right: UInt16 = 0x7C
-    static let left: UInt16 = 0x7B
+struct KeyboardKeys {
+    static let upArrow: UInt16 = 0x7E
+    static let rightArrow: UInt16 = 0x7C
+    static let leftArrow: UInt16 = 0x7B
+    static let f: UInt16 = 0x03
+}
+
+func myCGEventCallback(proxy: CGEventTapProxy, type: CGEventType, event: CGEvent, refcon: UnsafeMutableRawPointer?) -> Unmanaged<CGEvent>? {
+    
+    if [.keyDown , .keyUp].contains(type) {
+        let keyCode = event.getIntegerValueField(.keyboardEventKeycode)
+        if event.flags.contains(.maskCommand) && event.flags.contains(.maskAlternate) && keyCode == KeyboardKeys.leftArrow {
+            if [.keyDown].contains(type) {
+                WindowManager.shared.moveWindow(to: .leftHalf)
+                NSLog("Found shortcut btw")
+            }
+            return nil
+            
+        } else if event.flags.contains(.maskCommand) && event.flags.contains(.maskAlternate) && keyCode == KeyboardKeys.rightArrow {
+            if [.keyDown].contains(type) {
+                WindowManager.shared.moveWindow(to: .rightHalf)
+            }
+            return nil
+            
+        } else if event.flags.contains(.maskCommand) && event.flags.contains(.maskAlternate) && keyCode == KeyboardKeys.f {
+            if [.keyDown].contains(type) {
+                WindowManager.shared.moveWindow(to: .fullSize)
+            }
+            return nil
+        }
+    }
+    return Unmanaged.passRetained(event)
 }
 
 class WindowManager {
     private var windowMover = StandardWindowMover()
+    
+    static let shared = WindowManager();
+    
+    init() {}
     
     private static var didRegisterKeyMonitoring = false
     private var didShowAXPopup = false
@@ -39,18 +74,42 @@ class WindowManager {
         if !WindowManager.didRegisterKeyMonitoring {
             WindowManager.didRegisterKeyMonitoring = true;
             NSLog("WindowMover.registerKeyMonitoring: Registering key-press monitoring\n")
-            NSEvent.addGlobalMonitorForEvents(matching: .keyDown, handler: handleKeyPress(event:))
+
+            let eventMask = (1 << CGEventType.keyDown.rawValue) | (1 << CGEventType.keyUp.rawValue)
+            guard let eventTap = CGEvent.tapCreate(tap: .cgSessionEventTap,
+                                                   place: .headInsertEventTap,
+                                                   options: .defaultTap,
+                                                   eventsOfInterest: CGEventMask(eventMask),
+                                                   callback: myCGEventCallback,
+                                                   userInfo: nil) else {
+                                                    NSLog("Error: Failed to create event tap")
+                                                    exit(1)
+            }
+            
+            let runLoopSource = CFMachPortCreateRunLoopSource(kCFAllocatorDefault, eventTap, 0)
+            CFRunLoopAddSource(CFRunLoopGetCurrent(), runLoopSource, .commonModes)
+            CGEvent.tapEnable(tap: eventTap, enable: true)
+            CFRunLoopRun()
         }
     }
     
-    private func moveWindow(to moveType: MoveTypes) {
+    func moveWindow(to moveType: MoveTypes) {
         if WindowManager.didRegisterKeyMonitoring {
             switch moveType {
             case .leftHalf:
                 moveToLeftHalf()
             case .rightHalf:
                 moveToRightHalf()
+            case .fullSize:
+                fullSize()
             }
+        }
+    }
+    
+    private func fullSize() {
+        if let w = frontWindow {
+            NSLog("WindowMover.fullSize: Full size window\n")
+            windowMover.fullSize(window: w)
         }
     }
     
@@ -70,15 +129,22 @@ class WindowManager {
     
     private func handleKeyPress(event: NSEvent) -> Void {
         // left arrow && command and shift
-        if event.keyCode == ArrowKeys.left && event.modifierFlags.contains(.command) && event.modifierFlags.contains(.shift) {
+        if event.keyCode == KeyboardKeys.leftArrow && event.modifierFlags.contains(.command) && event.modifierFlags.contains(.shift) {
             NSLog("WindowManager.handleKeyPress: received key press Cmd + Shift + <-\n");
             moveWindow(to: .leftHalf)
         }
         
         // right arrow && command and shift
-        if event.keyCode == ArrowKeys.right && event.modifierFlags.contains(.command) && event.modifierFlags.contains(.shift) {
+        if event.keyCode == KeyboardKeys.rightArrow && event.modifierFlags.contains(.command) && event.modifierFlags.contains(.shift) {
             NSLog("WindowManager.handleKeyPress: received key press Cmd + Shift + ->\n");
             moveWindow(to: .rightHalf)
+        }
+        
+        // Cmd + Option + f
+        if(event.keyCode == KeyboardKeys.f && event.modifierFlags.contains(.command) && event.modifierFlags.contains(.option)) {
+            NSLog("WindowManager.handleKeyPress: received key press Cmd + Optin + f\n");
+            moveWindow(to: .fullSize)
+            
         }
     }
     
