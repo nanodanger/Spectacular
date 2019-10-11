@@ -6,7 +6,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     let windowManager = WindowManager()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        windowManager.registerKeyMonitoring()
+        windowManager.tryRegisteringKeyMonitoring()
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

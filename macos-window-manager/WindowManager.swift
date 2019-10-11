@@ -13,7 +13,8 @@ struct ArrowKeys {
 class WindowManager {
     private var windowMover = StandardWindowMover()
     
-    private static var didRegisterKeyMonitoring = false;
+    private static var didRegisterKeyMonitoring = false
+    private var didShowAXPopup = false
     
     private var frontWindow: AXUIElement? {
         get {
@@ -34,8 +35,8 @@ class WindowManager {
         }
     }
     
-    func registerKeyMonitoring() {
-        if checkAccess() && !WindowManager.didRegisterKeyMonitoring {
+    private func registerKeyMonitoring() {
+        if !WindowManager.didRegisterKeyMonitoring {
             WindowManager.didRegisterKeyMonitoring = true;
             NSLog("WindowMover.registerKeyMonitoring: Registering key-press monitoring\n")
             NSEvent.addGlobalMonitorForEvents(matching: .keyDown, handler: handleKeyPress(event:))
@@ -81,8 +82,18 @@ class WindowManager {
         }
     }
     
-    private func checkAccess() -> Bool {
-        let options = [kAXTrustedCheckOptionPrompt.takeUnretainedValue() as NSString: true]
+    func checkAccess(showPopup: Bool) -> Bool {
+        let options = [kAXTrustedCheckOptionPrompt.takeUnretainedValue() as NSString: showPopup]
         return AXIsProcessTrustedWithOptions(options as CFDictionary?)
+    }
+    
+    public func tryRegisteringKeyMonitoring() {
+        Timer.scheduledTimer(withTimeInterval: 0.5, repeats: true) { (timer) in
+            if self.checkAccess(showPopup: !self.didShowAXPopup) {
+                self.registerKeyMonitoring()
+                timer.invalidate()
+            }
+            self.didShowAXPopup = true
+        }
     }
 }
