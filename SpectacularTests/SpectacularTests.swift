@@ -1,7 +1,7 @@
 import XCTest
-@testable import macos_window_manager
+@testable import Spectacular
 
-class macos_window_managerTests: XCTestCase {
+class SpectacularTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

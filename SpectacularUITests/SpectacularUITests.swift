@@ -1,14 +1,6 @@
-//
-//  macos_window_managerUITests.swift
-//  macos-window-managerUITests
-//
-//  Created by Tamas Sule on 2019. 10. 07..
-//  Copyright © 2019. Tamas Sule. All rights reserved.
-//
-
 import XCTest
 
-class macos_window_managerUITests: XCTestCase {
+class SpectacularUITests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

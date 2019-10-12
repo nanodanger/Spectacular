@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:macos-window-manager.xcodeproj">
+      location = "self:/Users/nanodanger/dev/macos-window-manager/Spectacular.xcodeproj">
    </FileRef>
 </Workspace>

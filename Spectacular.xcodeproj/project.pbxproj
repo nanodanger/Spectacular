@@ -11,8 +11,8 @@
 		5B8FF2FD234B7ABD003ADFC5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8FF2FC234B7ABD003ADFC5 /* ViewController.swift */; };
 		5B8FF2FF234B7ABF003ADFC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B8FF2FE234B7ABF003ADFC5 /* Assets.xcassets */; };
 		5B8FF302234B7ABF003ADFC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B8FF300234B7ABF003ADFC5 /* Main.storyboard */; };
-		5B8FF30E234B7ABF003ADFC5 /* macos_window_managerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8FF30D234B7ABF003ADFC5 /* macos_window_managerTests.swift */; };
-		5B8FF319234B7ABF003ADFC5 /* macos_window_managerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8FF318234B7ABF003ADFC5 /* macos_window_managerUITests.swift */; };
+		5B8FF30E234B7ABF003ADFC5 /* SpectacularTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8FF30D234B7ABF003ADFC5 /* SpectacularTests.swift */; };
+		5B8FF319234B7ABF003ADFC5 /* SpectacularUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8FF318234B7ABF003ADFC5 /* SpectacularUITests.swift */; };
 		5BEE853B234E7CB9005BE035 /* StandardWindowMover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE853A234E7CB9005BE035 /* StandardWindowMover.swift */; };
 		5BEE853D234E7F5C005BE035 /* WindowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE853C234E7F5C005BE035 /* WindowManager.swift */; };
 		5BEE853F234EA393005BE035 /* WindowMover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BEE853E234EA393005BE035 /* WindowMover.swift */; };
@@ -36,18 +36,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5B8FF2F7234B7ABD003ADFC5 /* macos-window-manager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "macos-window-manager.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B8FF2F7234B7ABD003ADFC5 /* Spectacular.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spectacular.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B8FF2FA234B7ABD003ADFC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B8FF2FC234B7ABD003ADFC5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5B8FF2FE234B7ABF003ADFC5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B8FF301234B7ABF003ADFC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B8FF303234B7ABF003ADFC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5B8FF304234B7ABF003ADFC5 /* macos_window_manager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macos_window_manager.entitlements; sourceTree = "<group>"; };
-		5B8FF309234B7ABF003ADFC5 /* macos-window-managerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "macos-window-managerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B8FF30D234B7ABF003ADFC5 /* macos_window_managerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macos_window_managerTests.swift; sourceTree = "<group>"; };
+		5B8FF304234B7ABF003ADFC5 /* Spectacular.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Spectacular.entitlements; sourceTree = "<group>"; };
+		5B8FF309234B7ABF003ADFC5 /* SpectacularTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpectacularTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B8FF30D234B7ABF003ADFC5 /* SpectacularTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectacularTests.swift; sourceTree = "<group>"; };
 		5B8FF30F234B7ABF003ADFC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5B8FF314234B7ABF003ADFC5 /* macos-window-managerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "macos-window-managerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B8FF318234B7ABF003ADFC5 /* macos_window_managerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = macos_window_managerUITests.swift; sourceTree = "<group>"; };
+		5B8FF314234B7ABF003ADFC5 /* SpectacularUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpectacularUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B8FF318234B7ABF003ADFC5 /* SpectacularUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectacularUITests.swift; sourceTree = "<group>"; };
 		5B8FF31A234B7ABF003ADFC5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BEE853A234E7CB9005BE035 /* StandardWindowMover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardWindowMover.swift; sourceTree = "<group>"; };
 		5BEE853C234E7F5C005BE035 /* WindowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WindowManager.swift; sourceTree = "<group>"; };
@@ -82,9 +82,9 @@
 		5B8FF2EE234B7ABD003ADFC5 = {
 			isa = PBXGroup;
 			children = (
-				5B8FF2F9234B7ABD003ADFC5 /* macos-window-manager */,
-				5B8FF30C234B7ABF003ADFC5 /* macos-window-managerTests */,
-				5B8FF317234B7ABF003ADFC5 /* macos-window-managerUITests */,
+				5B8FF2F9234B7ABD003ADFC5 /* Spectacular */,
+				5B8FF30C234B7ABF003ADFC5 /* SpectacularTests */,
+				5B8FF317234B7ABF003ADFC5 /* SpectacularUITests */,
 				5B8FF2F8234B7ABD003ADFC5 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,14 +92,14 @@
 		5B8FF2F8234B7ABD003ADFC5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				5B8FF2F7234B7ABD003ADFC5 /* macos-window-manager.app */,
-				5B8FF309234B7ABF003ADFC5 /* macos-window-managerTests.xctest */,
-				5B8FF314234B7ABF003ADFC5 /* macos-window-managerUITests.xctest */,
+				5B8FF2F7234B7ABD003ADFC5 /* Spectacular.app */,
+				5B8FF309234B7ABF003ADFC5 /* SpectacularTests.xctest */,
+				5B8FF314234B7ABF003ADFC5 /* SpectacularUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5B8FF2F9234B7ABD003ADFC5 /* macos-window-manager */ = {
+		5B8FF2F9234B7ABD003ADFC5 /* Spectacular */ = {
 			isa = PBXGroup;
 			children = (
 				5B8FF2FA234B7ABD003ADFC5 /* AppDelegate.swift */,
@@ -107,38 +107,38 @@
 				5B8FF2FE234B7ABF003ADFC5 /* Assets.xcassets */,
 				5B8FF300234B7ABF003ADFC5 /* Main.storyboard */,
 				5B8FF303234B7ABF003ADFC5 /* Info.plist */,
-				5B8FF304234B7ABF003ADFC5 /* macos_window_manager.entitlements */,
+				5B8FF304234B7ABF003ADFC5 /* Spectacular.entitlements */,
 				5BEE853A234E7CB9005BE035 /* StandardWindowMover.swift */,
 				5BEE853C234E7F5C005BE035 /* WindowManager.swift */,
 				5BEE853E234EA393005BE035 /* WindowMover.swift */,
 			);
-			path = "macos-window-manager";
+			path = Spectacular;
 			sourceTree = "<group>";
 		};
-		5B8FF30C234B7ABF003ADFC5 /* macos-window-managerTests */ = {
+		5B8FF30C234B7ABF003ADFC5 /* SpectacularTests */ = {
 			isa = PBXGroup;
 			children = (
-				5B8FF30D234B7ABF003ADFC5 /* macos_window_managerTests.swift */,
+				5B8FF30D234B7ABF003ADFC5 /* SpectacularTests.swift */,
 				5B8FF30F234B7ABF003ADFC5 /* Info.plist */,
 			);
-			path = "macos-window-managerTests";
+			path = SpectacularTests;
 			sourceTree = "<group>";
 		};
-		5B8FF317234B7ABF003ADFC5 /* macos-window-managerUITests */ = {
+		5B8FF317234B7ABF003ADFC5 /* SpectacularUITests */ = {
 			isa = PBXGroup;
 			children = (
-				5B8FF318234B7ABF003ADFC5 /* macos_window_managerUITests.swift */,
+				5B8FF318234B7ABF003ADFC5 /* SpectacularUITests.swift */,
 				5B8FF31A234B7ABF003ADFC5 /* Info.plist */,
 			);
-			path = "macos-window-managerUITests";
+			path = SpectacularUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		5B8FF2F6234B7ABD003ADFC5 /* macos-window-manager */ = {
+		5B8FF2F6234B7ABD003ADFC5 /* Spectacular */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5B8FF31D234B7ABF003ADFC5 /* Build configuration list for PBXNativeTarget "macos-window-manager" */;
+			buildConfigurationList = 5B8FF31D234B7ABF003ADFC5 /* Build configuration list for PBXNativeTarget "Spectacular" */;
 			buildPhases = (
 				5B8FF2F3234B7ABD003ADFC5 /* Sources */,
 				5B8FF2F4234B7ABD003ADFC5 /* Frameworks */,
@@ -148,14 +148,14 @@
 			);
 			dependencies = (
 			);
-			name = "macos-window-manager";
+			name = Spectacular;
 			productName = "macos-window-manager";
-			productReference = 5B8FF2F7234B7ABD003ADFC5 /* macos-window-manager.app */;
+			productReference = 5B8FF2F7234B7ABD003ADFC5 /* Spectacular.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5B8FF308234B7ABF003ADFC5 /* macos-window-managerTests */ = {
+		5B8FF308234B7ABF003ADFC5 /* SpectacularTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5B8FF320234B7ABF003ADFC5 /* Build configuration list for PBXNativeTarget "macos-window-managerTests" */;
+			buildConfigurationList = 5B8FF320234B7ABF003ADFC5 /* Build configuration list for PBXNativeTarget "SpectacularTests" */;
 			buildPhases = (
 				5B8FF305234B7ABF003ADFC5 /* Sources */,
 				5B8FF306234B7ABF003ADFC5 /* Frameworks */,
@@ -166,14 +166,14 @@
 			dependencies = (
 				5B8FF30B234B7ABF003ADFC5 /* PBXTargetDependency */,
 			);
-			name = "macos-window-managerTests";
+			name = SpectacularTests;
 			productName = "macos-window-managerTests";
-			productReference = 5B8FF309234B7ABF003ADFC5 /* macos-window-managerTests.xctest */;
+			productReference = 5B8FF309234B7ABF003ADFC5 /* SpectacularTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		5B8FF313234B7ABF003ADFC5 /* macos-window-managerUITests */ = {
+		5B8FF313234B7ABF003ADFC5 /* SpectacularUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 5B8FF323234B7ABF003ADFC5 /* Build configuration list for PBXNativeTarget "macos-window-managerUITests" */;
+			buildConfigurationList = 5B8FF323234B7ABF003ADFC5 /* Build configuration list for PBXNativeTarget "SpectacularUITests" */;
 			buildPhases = (
 				5B8FF310234B7ABF003ADFC5 /* Sources */,
 				5B8FF311234B7ABF003ADFC5 /* Frameworks */,
@@ -184,9 +184,9 @@
 			dependencies = (
 				5B8FF316234B7ABF003ADFC5 /* PBXTargetDependency */,
 			);
-			name = "macos-window-managerUITests";
+			name = SpectacularUITests;
 			productName = "macos-window-managerUITests";
-			productReference = 5B8FF314234B7ABF003ADFC5 /* macos-window-managerUITests.xctest */;
+			productReference = 5B8FF314234B7ABF003ADFC5 /* SpectacularUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -212,7 +212,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 5B8FF2F2234B7ABD003ADFC5 /* Build configuration list for PBXProject "macos-window-manager" */;
+			buildConfigurationList = 5B8FF2F2234B7ABD003ADFC5 /* Build configuration list for PBXProject "Spectacular" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -225,9 +225,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				5B8FF2F6234B7ABD003ADFC5 /* macos-window-manager */,
-				5B8FF308234B7ABF003ADFC5 /* macos-window-managerTests */,
-				5B8FF313234B7ABF003ADFC5 /* macos-window-managerUITests */,
+				5B8FF2F6234B7ABD003ADFC5 /* Spectacular */,
+				5B8FF308234B7ABF003ADFC5 /* SpectacularTests */,
+				5B8FF313234B7ABF003ADFC5 /* SpectacularUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -275,7 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B8FF30E234B7ABF003ADFC5 /* macos_window_managerTests.swift in Sources */,
+				5B8FF30E234B7ABF003ADFC5 /* SpectacularTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B8FF319234B7ABF003ADFC5 /* macos_window_managerUITests.swift in Sources */,
+				5B8FF319234B7ABF003ADFC5 /* SpectacularUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,12 +292,12 @@
 /* Begin PBXTargetDependency section */
 		5B8FF30B234B7ABF003ADFC5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5B8FF2F6234B7ABD003ADFC5 /* macos-window-manager */;
+			target = 5B8FF2F6234B7ABD003ADFC5 /* Spectacular */;
 			targetProxy = 5B8FF30A234B7ABF003ADFC5 /* PBXContainerItemProxy */;
 		};
 		5B8FF316234B7ABF003ADFC5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 5B8FF2F6234B7ABD003ADFC5 /* macos-window-manager */;
+			target = 5B8FF2F6234B7ABD003ADFC5 /* Spectacular */;
 			targetProxy = 5B8FF315234B7ABF003ADFC5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -431,17 +431,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "macos-window-manager/macos_window_manager.entitlements";
+				CODE_SIGN_ENTITLEMENTS = Spectacular/Spectacular.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "macos-window-manager/Info.plist";
+				INFOPLIST_FILE = Spectacular/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 0.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "zone.nanodanger.macos-window-manager";
+				PRODUCT_BUNDLE_IDENTIFIER = zone.nanodanger.spectacular;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -451,17 +451,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_ENTITLEMENTS = "macos-window-manager/macos_window_manager.entitlements";
+				CODE_SIGN_ENTITLEMENTS = Spectacular/Spectacular.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "macos-window-manager/Info.plist";
+				INFOPLIST_FILE = Spectacular/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 0.0.1;
-				PRODUCT_BUNDLE_IDENTIFIER = "zone.nanodanger.macos-window-manager";
+				PRODUCT_BUNDLE_IDENTIFIER = zone.nanodanger.spectacular;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -484,7 +484,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "zone.nanodanger.macos-window-managerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/macos-window-manager.app/Contents/MacOS/macos-window-manager";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Spectacular.app/Contents/MacOS/Spectacular";
 			};
 			name = Debug;
 		};
@@ -505,7 +505,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "zone.nanodanger.macos-window-managerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/macos-window-manager.app/Contents/MacOS/macos-window-manager";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Spectacular.app/Contents/MacOS/Spectacular";
 			};
 			name = Release;
 		};
@@ -550,7 +550,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		5B8FF2F2234B7ABD003ADFC5 /* Build configuration list for PBXProject "macos-window-manager" */ = {
+		5B8FF2F2234B7ABD003ADFC5 /* Build configuration list for PBXProject "Spectacular" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5B8FF31B234B7ABF003ADFC5 /* Debug */,
@@ -559,7 +559,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5B8FF31D234B7ABF003ADFC5 /* Build configuration list for PBXNativeTarget "macos-window-manager" */ = {
+		5B8FF31D234B7ABF003ADFC5 /* Build configuration list for PBXNativeTarget "Spectacular" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5B8FF31E234B7ABF003ADFC5 /* Debug */,
@@ -568,7 +568,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5B8FF320234B7ABF003ADFC5 /* Build configuration list for PBXNativeTarget "macos-window-managerTests" */ = {
+		5B8FF320234B7ABF003ADFC5 /* Build configuration list for PBXNativeTarget "SpectacularTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5B8FF321234B7ABF003ADFC5 /* Debug */,
@@ -577,7 +577,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		5B8FF323234B7ABF003ADFC5 /* Build configuration list for PBXNativeTarget "macos-window-managerUITests" */ = {
+		5B8FF323234B7ABF003ADFC5 /* Build configuration list for PBXNativeTarget "SpectacularUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				5B8FF324234B7ABF003ADFC5 /* Debug */,
