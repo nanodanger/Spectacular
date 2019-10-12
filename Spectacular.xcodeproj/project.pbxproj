@@ -474,14 +474,14 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "macos-window-managerTests/Info.plist";
+				INFOPLIST_FILE = SpectacularTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = "zone.nanodanger.macos-window-managerTests";
+				PRODUCT_BUNDLE_IDENTIFIER = zone.nanodanger.SpectacularTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Spectacular.app/Contents/MacOS/Spectacular";
@@ -495,14 +495,14 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "macos-window-managerTests/Info.plist";
+				INFOPLIST_FILE = SpectacularTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.15;
-				PRODUCT_BUNDLE_IDENTIFIER = "zone.nanodanger.macos-window-managerTests";
+				PRODUCT_BUNDLE_IDENTIFIER = zone.nanodanger.SpectacularTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Spectacular.app/Contents/MacOS/Spectacular";
@@ -515,16 +515,16 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "macos-window-managerUITests/Info.plist";
+				INFOPLIST_FILE = SpectacularUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "zone.nanodanger.macos-window-managerUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = zone.nanodanger.SpectacularUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "macos-window-manager";
+				TEST_TARGET_NAME = Spectacular;
 			};
 			name = Debug;
 		};
@@ -534,16 +534,16 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = "macos-window-managerUITests/Info.plist";
+				INFOPLIST_FILE = SpectacularUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "zone.nanodanger.macos-window-managerUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = zone.nanodanger.SpectacularUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "macos-window-manager";
+				TEST_TARGET_NAME = Spectacular;
 			};
 			name = Release;
 		};
